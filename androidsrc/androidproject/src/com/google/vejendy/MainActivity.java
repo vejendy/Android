@@ -15,14 +15,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 
 public class MainActivity extends Activity {
 	EditText id;
+	EditText name;
 	InputMethodManager imm;
 	Button btn1; Button btn2;
 	LinearLayout baselayout;
 	ImageView imgview1;ImageView listview;
+	RadioGroup gender;
+	RadioButton male;
+	RadioButton malefemale;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,7 @@ public class MainActivity extends Activity {
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         baselayout = (LinearLayout) findViewById(R.id.baselayout);
         id = (EditText) findViewById(R.id.id);
+        name = (EditText) findViewById(R.id.name);
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
         imgview1 = (ImageView) findViewById(R.id.imgview1);
@@ -41,7 +48,9 @@ public class MainActivity extends Activity {
         baselayout.setOnClickListener( bClick );
         imgview1.setOnTouchListener( touch );
         listview.setOnTouchListener( touch );
-        
+        gender = (RadioGroup) findViewById(R.id.gender);
+        male = (RadioButton) findViewById(R.id.male);
+        male.setChecked(true);
 //        btn.setOnClickListener( new Button.OnClickListener() {
 //
 //			@Override
@@ -95,9 +104,22 @@ public class MainActivity extends Activity {
 			switch (v.getId()) {
 			case R.id.btn1:
 				id.setText("button 1");
+				malefemale = (RadioButton) findViewById(gender.getCheckedRadioButtonId());
+				String strgender = malefemale.getText().toString();
+				id.setText(strgender);
 				break;
 			case R.id.btn2:
-				id.setText("button 2");
+				malefemale = (RadioButton) findViewById(gender.getCheckedRadioButtonId());
+				String gender = malefemale.getText().toString();
+				Intent intent = new Intent(MainActivity.this , MemberInsertActivity.class);
+				intent.putExtra("id", id.getText().toString());
+				intent.putExtra("name", name.getText().toString());
+				if( gender.equals("Male")){
+					intent.putExtra("malefemale", "남자");
+				} else {
+					intent.putExtra("malefemale", "여자");	
+				}
+				startActivityForResult(intent, 0);
 				break;
 			default:
 				break;

@@ -51,6 +51,16 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MemberInsertActivity"
+            android:label="Gender_ID_NAME" >
+            <intent-filter>
+                <action android:name="arabiannight.tistory.com.interntfilter.secondview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
     </application>
 
 </manifest>

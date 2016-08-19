@@ -31,21 +31,26 @@ public final class R {
         public static final int testimage=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000e;
+        public static final int action_settings=0x7f090013;
         public static final int baselayout=0x7f090000;
-        public static final int btn1=0x7f090004;
-        public static final int btn2=0x7f090005;
-        public static final int close=0x7f090009;
-        public static final int daum=0x7f090008;
-        public static final int google=0x7f090007;
+        public static final int btn1=0x7f090008;
+        public static final int btn2=0x7f090009;
+        public static final int close=0x7f09000d;
+        public static final int daum=0x7f09000c;
+        public static final int female=0x7f090005;
+        public static final int gender=0x7f090003;
+        public static final int google=0x7f09000b;
         public static final int id=0x7f090001;
-        public static final int imgview1=0x7f090002;
-        public static final int listview=0x7f090003;
-        public static final int naver=0x7f090006;
-        public static final int resulttext=0x7f09000c;
-        public static final int rowtext=0x7f09000d;
-        public static final int selecteditem=0x7f09000b;
-        public static final int webview=0x7f09000a;
+        public static final int imgview1=0x7f090006;
+        public static final int listview=0x7f090007;
+        public static final int male=0x7f090004;
+        public static final int malefemale=0x7f090012;
+        public static final int name=0x7f090002;
+        public static final int naver=0x7f09000a;
+        public static final int resulttext=0x7f090010;
+        public static final int rowtext=0x7f090011;
+        public static final int selecteditem=0x7f09000f;
+        public static final int webview=0x7f09000e;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -54,6 +59,7 @@ public final class R {
         public static final int intent_value=0x7f030003;
         public static final int listview_activity=0x7f030004;
         public static final int listview_row=0x7f030005;
+        public static final int memberinsert=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f080000;
