@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/baselayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#cccccc"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+	<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" 
+    	android:weightSum="10"
+    	android:layout_marginTop="20dp"  >
+		<TextView
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        style="@style/myfont25"
+	        android:gravity="center"
+	        android:layout_weight="2"
+	        android:text="아이디" />
+    	<EditText 
+    	    android:id="@+id/id"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_weight="8"
+    	    android:maxLength="15"
+    	    android:background="@drawable/edittext_radius_4corners" />
+	</LinearLayout>
+	<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" 
+    	android:weightSum="10"
+    	android:layout_marginTop="10dp" >
+		<TextView
+	        android:layout_width="80dp"
+	        android:layout_height="wrap_content"
+	        android:gravity="center"
+	        style="@style/mytitle"
+	        android:layout_weight="3"
+	        android:text="name" />
+    	<EditText 
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:layout_weight="7"
+    	    android:maxLength="15"
+    	    android:background="@drawable/edittext_radius_4corners" />
+	</LinearLayout>
+	<RadioGroup 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" >
+	    <RadioButton
+	        android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="Male" />
+	    <RadioButton
+	        android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:text="Female" />
+	</RadioGroup>
+	<TextView 
+	    android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="20dp"
+    	android:textSize="20dp"
+    	android:textStyle="bold"
+    	android:text="Hobby"/>
+	<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="5dp" >
+		<CheckBox 
+		    android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	style="@style/myfont25"
+	    	android:text="soccer" />
+		<CheckBox 
+		    android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_marginLeft="10dp"
+	    	android:text="baseball" />
+		<CheckBox 
+		    android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_marginLeft="10dp"
+	    	android:text="vollyball" />
+	</LinearLayout>
+	<Spinner
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:entries="@array/dept"/>
+	<LinearLayout 
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" 
+    	android:layout_marginLeft="10dp"
+    	android:layout_marginTop="5dp" >
+		<ImageView 
+		    android:id="@+id/imgview1"
+		    android:layout_width="50dp"
+		    android:layout_height="50dp"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+		    android:src="@drawable/testimage"
+		    android:clickable="true"/>
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="Intent" />
+		<ImageView 
+		    android:id="@+id/listview"
+		    android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"
+		    android:layout_width="50dp"
+		    android:layout_height="50dp"
+		    android:src="@drawable/iconimg"
+		    android:clickable="true"/>
+		<TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="Listview" />
+	</LinearLayout>
+	<Button
+	    android:id="@+id/btn1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Button1" />
+	<Button
+	    android:id="@+id/btn2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Button2" />
+
+	
+
+</LinearLayout>
